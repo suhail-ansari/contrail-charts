@@ -59,9 +59,9 @@ export default (env = defaultEnv) => {
     'd3-time-format', 'd3-hierarchy', 'd3-geo', 'd3-zoom']
 
   const externals = {
-    'jquery': {amd: 'jquery', root: 'jQuery'},
-    'lodash': {amd: 'lodash', root: '_'},
-    'backbone': {amd: 'backbone', root: 'Backbone'},
+    //'jquery': {amd: 'jquery', root: 'jQuery'},
+    //'lodash': {amd: 'lodash', root: '_'},
+    //'backbone': {amd: 'backbone', root: 'Backbone'},
   }
 
   // For every library added in the include env, we will remove from d3Libs.
