@@ -2,7 +2,7 @@
   "name": "contrail-charts",
   "version": "0.0.1",
   "description": "Contrail Chart library",
-  "main": "src/js/contrail-charts.js",
+  "main": "build/contrail-charts.js",
   "scripts": {
     "build": "npm run build:lib && npm run build:examples",
     "build:lib": "webpack --env.prod",
@@ -19,7 +19,8 @@
     "lint": "npm run lint:src && npm run lint:examples",
     "lint:src": "eslint src/**",
     "lint:examples": "eslint examples/**",
-    "doc": "jsdoc src -r -d docs"
+    "doc": "jsdoc src -r -d docs",
+    "prepublish": "npm run build"
   },
   "precommit": "lint",
   "license": "Apache-2.0",
