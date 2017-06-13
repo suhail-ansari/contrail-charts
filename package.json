@@ -2,9 +2,9 @@
   "name": "contrail-charts",
   "version": "0.0.1",
   "description": "Contrail Chart library",
-  "main": "build/contrail-charts.js",
+  "main": "dist/contrail-charts.js",
   "scripts": {
-    "build": "npm run build:lib && npm run build:examples",
+    "build": "npm run build:lib && npm run build:examples && mkdir -p dist && cp build/contrail-charts.js dist/ && cp build/contrail-charts.css dist",
     "build:lib": "webpack --env.prod",
     "build:lib:withD3": "webpack --env.prod --env.include 'd3-all'",
     "build:examples": "webpack --env.prod --config webpack.examples.config.babel.js",
@@ -19,8 +19,7 @@
     "lint": "npm run lint:src && npm run lint:examples",
     "lint:src": "eslint src/**",
     "lint:examples": "eslint examples/**",
-    "doc": "jsdoc src -r -d docs",
-    "postinstall": "npm install && npm run build"
+    "doc": "jsdoc src -r -d docs"
   },
   "precommit": "lint",
   "license": "Apache-2.0",
